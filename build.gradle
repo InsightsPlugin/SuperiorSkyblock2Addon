@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+String packagePath = 'net.frankheijden.insights.addons.superiorskyblock2'
+group = packagePath
+version = '1.0.0'
+description = 'SuperiorSkyblock2Addon'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://papermc.io/repo/repository/maven-public/' }
+    maven { url 'https://jitpack.io' }
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    compileOnly 'com.github.InsightsPlugin:Insights:v5.9.0'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.16.4-R0.1-SNAPSHOT'
+    compileOnly name: 'SuperiorSkyblock2-b38'
+}
